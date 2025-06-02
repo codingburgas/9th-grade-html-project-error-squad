@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url(images/pexels-francesco-ungaro-97494.jpg);
+  background-size: cover;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+body.dark {
+  background: url('../images/fire-dark.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+}
+/*dark mode*/
+
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+nav a, nav button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav a:hover, nav button:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 4em 2em;
+  background-color: rgba(0, 0, 0, 0.6);
+  max-width: 800px;
+  margin: 2em auto;
+  text-align: center;
+  border-radius: 12px;
+}
+
+footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 1em;
+}
