@@ -5,37 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fire Safety System</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  
-  <script src="script.js"></script>
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <h1>🔥 Fire Safety System</h1>
-      <nav>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Firefighters</a></li>
-          <li><a href="#">Vehicles</a></li>
-          <li><a href="#">Incidents</a></li>
-          <li><a href="#">Statistics</a></li>
-          <li><button onclick="toggleTheme()">🌗 Theme</button></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Info</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Resources</a></li>
         </ul>
+        <button onclick="toggleTheme()" class="theme-btn">🌗</button>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h2>Welcome to the Fire Safety Management System</h2>
-      <p>Monitor incidents, manage teams, and coordinate operations in real time.</p>
-    </section>
-  </main>
+    <main>
+      <section class="hero">
+        <h1>Welcome to the Fire Safety Management System</h1>
+        <p>Monitor incidents, manage teams, and track operations efficiently.</p>
+      </section>
 
-  <footer>
-    <p>&copy; 2025 – School Project</p>
-  </footer>
+      <section class="links-grid">
+        <a href="firefighters.html" class="link-card">👨‍🚒 Firefighters</a>
+        <a href="vehicles.html" class="link-card">🚒 Vehicles</a>
+        <a href="incidents.html" class="link-card">🔥 Incidents</a>
+        <a href="statistics.html" class="link-card">📊 Statistics</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>Error Squad cooperation</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+    };
+  </script>
 </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Firefighters</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .status {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 0.5em;
+    }
+
+    .available { background-color: green; }
+    .waiting { background-color: orange; }
+    .busy { background-color: red; }
+
+    .firefighters-table {
+      width: 90%;
+      max-width: 960px;
+      margin: 2em auto;
+      border-collapse: collapse;
+      background-color: #ffffffcc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .firefighters-table th, .firefighters-table td {
+      padding: 0.8em;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .firefighters-table th {
+      background-color: #444;
+      color: white;
+    }
+
+    body.dark .firefighters-table {
+      background-color: #2a2a2a;
+    }
+
+    body.dark .firefighters-table th {
+      background-color: #111;
+    }
+
+    .status-label {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Info</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+        <button onclick="toggleTheme()" class="theme-btn">🌗</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Firefighters Overview</h1>
+        <p>Here is the current list of active firefighters and their status.</p>
+      </section>
+
+      <table class="firefighters-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Team</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>John Petrov</td>
+            <td>Alpha</td>
+            <td class="status-label"><span class="status busy"></span> In Incident</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Maria Ivanova</td>
+            <td>Bravo</td>
+            <td class="status-label"><span class="status waiting"></span> Waiting</td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>Georgi Georgiev</td>
+            <td>Alpha</td>
+            <td class="status-label"><span class="status available"></span> Available</td>
+          </tr>
+          <tr>
+            <td>004</td>
+            <td>Elena Dimitrova</td>
+            <td>Charlie</td>
+            <td class="status-label"><span class="status available"></span> Available</td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>Petar Stoyanov</td>
+            <td>Bravo</td>
+            <td class="status-label"><span class="status busy"></span> In Incident</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <p>Created as part of a school fire safety awareness project.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+    };
+  </script>
+</body>
+</html>
