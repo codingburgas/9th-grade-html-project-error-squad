@@ -47,13 +47,13 @@ Interactive UI with accessible navigation and styling
 This project was created using HTML, CSS, and JavaScript and is a collaborative effort developed following a team-based project structure including roles like Front-end Developer, Back-end Developer, Designer, and Scrum Trainer.ㅤㅤㅤㅤ
                             ㅤ  
 # ⭑🫂Team Members
-- ### <a href = "https://github.com/AYAAtanasov23"> Aleksey Atanasov  (as a Scrum Trainer); </a>
+- ### <a href = "https://github.com/AYAAtanasov23"> Aleksey Atanasov  (Scrum Trainer); </a>
 
 - ### <a href = "https://github.com/ddzavalishin23"> Denis Zavalishin (Front-end Developer); </a>
 
-- ### <a href = "https://github.com/DZPertrov23"> Danail Petrov  (as a Back-end developer); </a>
+- ### <a href = "https://github.com/DZPertrov23"> Danail Petrov  (Back-end developer); </a>
 
-- ### <a href = "https://github.com/SVSidorov23"> Svyatoslav Sidorov (as a Designer); </a>
+- ### <a href = "https://github.com/SVSidorov23"> Svyatoslav Sidorov (Designer); </a>
 
 
 
