@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Statistics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Info</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+        <button onclick="toggleTheme()" class="theme-btn">🌗</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Firefighters Overview</h1>
+        <p>Here is the statics of the incidents</p>
+      </section>
+
+    <footer>
+      <p>Created as part of a school fire safety awareness project.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+    };
+  </script>
+</body>
+</html>
