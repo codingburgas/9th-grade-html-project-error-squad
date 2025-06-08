@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Error Squad - Live Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style/map.css" />
+</head>
+<body data-theme="light">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">🔥 Error Squad</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Report</a></li>
+        <li><a href="map.html" class="active">Map</a></li>
+        <li><a href="#">Stats</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-btn">🌓</button>
+    </div>
+  </nav>
+
+  <div class="sidebar">
+    <h3>🔥 Live Fire Activity</h3>
+    <p><strong>Active Fires:</strong> <span id="activeCount">0</span></p>
+    <p><strong>High Priority:</strong> <span id="highCount">0</span></p>
+    <p><strong>Last Updated:</strong> <span id="updatedTime">--:--</span></p>
+    <div class="legend">
+      <p><span class="dot red"></span> High Risk</p>
+      <p><span class="dot orange"></span> Medium Risk</p>
+      <p><span class="dot green"></span> Low Risk</p>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="scripts/map.js"></script>
+</body>
+</html>
