@@ -280,3 +280,65 @@
   background-color: #fff;
   color: #dd2476;
 }
+#forms {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+#forms button {
+    margin: 10px 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#forms button:hover {
+    background-color: #0056b3;
+}
+
+.form-section {
+    display: none;
+    margin-top: 20px;
+}
+
+.form-section.active {
+    display: block;
+}
+
+#forms label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#forms input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#forms textarea {
+    resize: vertical;
+}
+#forms input[type="submit"]{
+  width: 30%;
+  background-color:#007BFF ;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius:  5px;
+}
+#forms input[type="submit"]:hover {
+    background-color:#0056b3 ;
+}
