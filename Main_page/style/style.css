@@ -1,6 +1,9 @@
-* {
-      box-sizing: border-box;
-    }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
     html, body {
       margin: 0;
@@ -32,7 +35,8 @@
 
     .nav-container {
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -54,6 +58,8 @@
       gap: 1em;
       margin: 0;
       padding: 0;
+      transition: color 0.3s;
+
     }
 
     .nav-links li a {
@@ -89,7 +95,8 @@
       font-weight: bold;
       background: transparent;
       color: white;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
+
     }
 
     .nav-cta .btn:hover {
@@ -214,3 +221,62 @@
         align-items: center;
       }
     }
+    .hero {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: white;
+  padding: 6em 2em;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  line-height: 1.5;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.btn-hero {
+  padding: 0.8em 1.5em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1em;
+}
+
+.btn-hero-primary {
+  background-color: #fff;
+  color: #ff512f;
+}
+
+.btn-hero-primary:hover {
+  background-color: #ffe1db;
+}
+
+.btn-hero-secondary {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-hero-secondary:hover {
+  background-color: #fff;
+  color: #dd2476;
+}
