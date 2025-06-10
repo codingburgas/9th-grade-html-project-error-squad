@@ -1,5 +1,5 @@
 
-<img src="logo.png" alt="Logo" width="500" height="10">
+<img src="/Main_page/Images/logo.png" alt="Logo" width="500" height="10">
 
 <h1 align="center" color="blue">
 <strong>ERROR SQUAD</strong>

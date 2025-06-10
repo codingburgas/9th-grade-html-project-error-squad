@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const options = {
-        responsive: true, // Адаптивность
-        maintainAspectRatio: false, // Отключаем авто-соотношение сторон
+        responsive: true, 
+        maintainAspectRatio: false, 
         plugins: {
             legend: {
                 position: 'top',
@@ -56,5 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
         type: 'bar',
         data: data,
         options: options
+    });
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
     });
 });

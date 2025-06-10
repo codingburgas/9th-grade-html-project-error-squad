@@ -248,6 +248,12 @@ form input[type="submit"]:hover {
     flex-direction: column;
     align-items: center;
   }
+    .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
 
   .nav-links {
     gap: 1rem;
@@ -264,4 +270,46 @@ form input[type="submit"]:hover {
   .container {
     margin: 2rem auto;
   }
+}
+footer {
+  background: rgba(255 255 255 / 0.06);
+  backdrop-filter: saturate(180%) blur(15px);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  /* Removed fixed position */
+  /* position: fixed;
+  bottom: 0; */
+  width: 100%;
+  border-top: 1px solid rgba(255 255 255 / 0.15);
+  color: #ccc;
+  user-select: none;
+  z-index: 100;
+  margin-top: auto; /* push footer down */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #bbb;
+}
+
+.footer-content nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-content nav p {
+  margin: 0;
+  color: #bbb;
+  user-select: text;
 }

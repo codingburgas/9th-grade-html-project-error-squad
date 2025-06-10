@@ -31,18 +31,32 @@ function showForm(formName) {
 
 // Theme toggle with yellow theme default
 document.addEventListener('DOMContentLoaded', () => {
-  const themeBtn = document.getElementById('themeToggle');
+  const themeToggleBtn = document.getElementById("themeToggle");
   const body = document.body;
 
-  themeBtn.addEventListener('click', () => {
-    if (body.classList.contains('yellow-theme')) {
-      body.classList.remove('yellow-theme');
-      body.classList.add('dark-theme');
-      themeBtn.textContent = '☀️'; // sun icon
-    } else {
-      body.classList.remove('dark-theme');
-      body.classList.add('yellow-theme');
-      themeBtn.textContent = '🌓'; // moon icon
-    }
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("dark");
+    themeToggleBtn.textContent = "☀️"; 
+  } else {
+    themeToggleBtn.textContent = "🌓"; 
+  }
+
+  themeToggleBtn.addEventListener("click", () => {
+    const isDark = body.classList.toggle("dark");
+    themeToggleBtn.textContent = isDark ? "☀️" : "🌓";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 });
+
+    function showForm(formId) {
+      document.querySelectorAll('.form-section').forEach(section => {
+        if(section.id === formId) {
+          section.style.display = 'block';
+          section.classList.add('active');
+        } else {
+          section.style.display = 'none';
+          section.classList.remove('active');
+        }
+      });
+    }

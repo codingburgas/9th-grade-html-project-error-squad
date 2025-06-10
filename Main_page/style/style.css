@@ -360,3 +360,15 @@ html.dark #themeToggle {
   background-color: #ff764f;
   color: #fff;
 }
+.chart-container{
+  width: 80%;
+  margin: auto;
+}
+.statdiv{
+  text-align: center;
+  margin: auto;
+  border: #0a0a0a;
+  background-color: #44577a;
+  width: 40%;
+  border-radius: 15px;
+}
