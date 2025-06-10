@@ -3,46 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vehicles</title>
-  <link rel="stylesheet" href="../style/style.css" />
+  <title>🚒 Firetrucks – Error Squad</title>
+  <link rel="stylesheet" href="../style/vehicles.css" />
+  <script src="../script/vehicles.js" defer></script>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <nav class="navbar">
-        <ul>
-        <li><a href="../index.html" class="active">Home</a></li>
-        <li><a href="fire-report.html">Report</a></li>
-        <li><a href="map.html">Map</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="statistics.html">Stats</a></li>
-        </ul>
-        <button onclick="toggleTheme()" class="theme-btn">🌗</button>
-      </nav>
-    </header>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo-nav">
+      <div class="logo-icon-nav">⚠️</div>
+      <div class="logo-text">Error Squad</div>
+    </div>
 
-    <main>
-      <section class="hero">
-        <h1>Firefighters Overview</h1>
-        <p>Here is the current list of active vehicles.</p>
-      </section>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="fire-report.html">Report</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="statistics.html">Stats</a></li>
+      <li><a href="vehicles.html" class="active">Vehicles</a></li> 
+    </ul>
 
-     <footer>
-      <p>Error Squad cooperation</p>
-    </footer>
+    <div class="nav-cta">
+      <button id="themeToggle" title="Toggle Theme">🌓</button>
+      <a href="login.html" class="btn btn-login">Login</a>
+      <a href="register.html" class="btn btn-join">Join</a>
+    </div>
   </div>
+</nav>
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-    }
 
-    window.onload = () => {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark');
-      }
-    };
-  </script>
+  <button id="themeToggle">🌓</button>
+
+  <div class="vehicles-container">
+    <h1>🚒 Firetruck Fleet</h1>
+
+    <div class="emoji-card-container">
+
+      <div class="emoji-card">
+        <img src="../Images/Enforcer_PUC.png" alt="Blaze Guardian">
+        <h2>Blaze Guardian</h2>
+        <ul class="specs">
+          <li><strong>Brand:</strong> Pierce Manufacturing</li>
+          <li><strong>Model:</strong> Enforcer PUC</li>
+          <li><strong>Year:</strong> 2019</li>
+          <li><strong>Horsepower:</strong> 450 HP</li>
+          <li><strong>Capacity:</strong> 750 gallons</li>
+          <li><strong>Crew:</strong> 6 firefighters</li>
+        </ul>
+      </div>
+
+      <div class="emoji-card">
+        <img src="../Images/panther_6x6.png" alt="Rescue Ranger">
+        <h2>Rescue Ranger</h2>
+        <ul class="specs">
+          <li><strong>Brand:</strong> Rosenbauer International</li>
+          <li><strong>Model:</strong> Panther 6x6 ARFF</li>
+          <li><strong>Year:</strong> 2021</li>
+          <li><strong>Horsepower:</strong> 700 HP</li>
+          <li><strong>Capacity:</strong> 3,000 gallons</li>
+          <li><strong>Crew:</strong> 2 + medic bay</li>
+        </ul>
+      </div>
+
+      <div class="emoji-card">
+        <img src="../Images/Aerial_Platform.png" alt="Sky Climber">
+        <h2>Sky Climber</h2>
+        <ul class="specs">
+          <li><strong>Brand:</strong> E-One Fire Trucks</li>
+          <li><strong>Model:</strong> HP 100 Aerial Platform</li>
+          <li><strong>Year:</strong> 2018</li>
+          <li><strong>Horsepower:</strong> 500 HP</li>
+          <li><strong>Ladder Height:</strong> 100 ft</li>
+          <li><strong>Crew:</strong> 5 firefighters</li>
+        </ul>
+      </div>
+
+      <div class="emoji-card">
+        <img src="../Images/F-550.png" alt="Wildfire Hunter">
+        <h2>Wildfire Hunter</h2>
+        <ul class="specs">
+          <li><strong>Brand:</strong> Ford Emergency Vehicles</li>
+          <li><strong>Model:</strong> F-550 Super Duty Brush Truck</li>
+          <li><strong>Year:</strong> 2020</li>
+          <li><strong>Horsepower:</strong> 330 HP</li>
+          <li><strong>Capacity:</strong> 400 gallons</li>
+          <li><strong>Special Features:</strong> 4x4 Off-Road, Foam System</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 Error Squad. All rights reserved.</p>
+    <nav>
+      <h4>Contact</h4>
+        <p>📧 errorsquad@gmail.com</p>
+        <p>📞 +359 888 123 456</p>
+        <p>📍 Nationwide Coverage</p>
+    </nav>
+  </div>
+</footer>
+
+
 </body>
 </html>

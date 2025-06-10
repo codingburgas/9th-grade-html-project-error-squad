@@ -5,9 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Error Squad - Fire Safety Network</title>
   <link rel="stylesheet" href="style/style.css" />
-  <script src="script/script.js" defer></script>
+
+  <!-- Inline script to apply theme before page renders -->
+  <script>
+    try {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {
+      console.error('Theme detection failed:', e);
+    }
+  </script>
 </head>
-<body data-theme="light">
+<body>
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo-nav">
@@ -20,13 +31,14 @@
         <li><a href="pages/fire-report.html">Report</a></li>
         <li><a href="pages/map.html">Map</a></li>
         <li><a href="pages/contact.html">Contact</a></li>
-        <li><a href="pages/statistics.html">Stats</a></li>
+        <li><a href="statistics.html">Stats</a></li>
+        <li><a href="pages/vehicles.html">Vehicles</a></li>
       </ul>
 
       <div class="nav-cta">
         <button id="themeToggle" title="Toggle Theme">🌓</button>
         <a href="pages/login.html" class="btn btn-login">Login</a>
-        <a href="#" class="btn btn-join">Join</a>
+        <a href="pages/register.html" class="btn btn-join">Join</a>
       </div>
     </div>
   </nav>
@@ -66,6 +78,7 @@
       <div class="footer-section">
         <h4>Links</h4>
         <p><a href="#">Home</a></p>
+        <p><a href="#">Features</a></p>
         <p><a href="#">Report</a></p>
         <p><a href="#">Contact</a></p>
       </div>
@@ -78,5 +91,7 @@
     </div>
     <div class="footer-bottom">© 2025 Error Squad. All rights reserved.</div>
   </footer>
+
+  <script src="script/script.js" defer></script>
 </body>
 </html>

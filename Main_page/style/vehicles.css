@@ -1,0 +1,284 @@
+body {
+  background: linear-gradient(135deg, #1b1b2f, #162447);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #999;
+  background: none;
+  color: white;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.vehicles-container {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.vehicles-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.emoji-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.emoji-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(255, 80, 80, 0.4);
+}
+
+.emoji-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.emoji-card h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.specs {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.specs li {
+  margin-bottom: 0.4rem;
+}
+.emoji-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.emoji-card {
+  width: 280px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .emoji-card-container {
+    justify-content: center;
+  }
+
+  .emoji-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+.footer {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  z-index: 100;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-content nav a {
+  color: orange;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-content nav a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: default;
+}
+
+.logo-icon-nav {
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: orange;
+  font-weight: 700;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid orange;
+  color: orange;
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: orange;
+  color: #1b1b2f;
+}
+
+.btn-login {
+  border-color: white;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: white;
+  color: #1b1b2f;
+}
+
+#themeToggle {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 0 0.5rem;
+}
+body.dark {
+  background: #0a0a0a;
+  color: #eee;
+}
+
+body.dark .vehicles-container,
+body.dark .emoji-card,
+body.dark .footer,
+body.dark .navbar {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #eee;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
+}
+
+body.dark .emoji-card:hover {
+  box-shadow: 0 10px 40px rgba(100, 150, 255, 0.5);
+}
+
+body.dark .nav-links li a,
+body.dark .logo-nav {
+  color: #eee;
+}
+
+body.dark .nav-links li a:hover,
+body.dark .nav-links li a.active {
+  color: #6aabff;
+}
+
+body.dark .btn {
+  border-color: #6aabff;
+  color: #6aabff;
+}
+
+body.dark .btn:hover {
+  background-color: #6aabff;
+  color: #0a0a0a;
+}
+
+body.dark #themeToggle {
+  border-color: #ffd580;
+  color: #ffd580;
+}
+
+
