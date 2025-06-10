@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fire Report</title>
-  <link rel="stylesheet" href="../style/style.css" />
-  <script src="../script/fire-report.js"></script>
+  <link rel="stylesheet" href="../style/report.css" />
+  <script src="../script/report.js" defer></script>
 </head>
 <body data-theme="light">
   <nav class="navbar">
@@ -32,51 +32,70 @@
     </div>
   </nav>
 
-  <div id = "forms">
-    <button onclick="showForm('Fire')">Fire Incident</button>
-    <button onclick="showForm('Incident')">Other Incident</button>
+  <main id="forms" class="container">
+    <div class="form-buttons">
+      <button type="button" onclick="showForm('fireForm')">Fire Incident</button>
+      <button type="button" onclick="showForm('incidentForm')">Other Incident</button>
+    </div>
 
-    <div id="Fire" class="form-section active">
+    <section id="fireForm" class="form-section active">
       <form>
-         <label for="Location"> Location</label>
-         <input type="text" id="Location" name="Location"><br><br>
-         <label for="Vehicle">Vehicle</label>
-         <input type="text" id="Vehicle" name="Vehicle"><br><br>
-         <label for="AddInfo">Additional Info</label>
-         <textarea id="AddInfo" name="AddInfo" rows="4" cols="50">
-         Add additional information
-         </textarea>
+        <label for="fireLocation">Location</label>
+        <input type="text" id="fireLocation" name="fireLocation" placeholder="Enter location" required>
+
+        <label for="fireVehicle">Vehicle</label>
+        <input type="text" id="fireVehicle" name="fireVehicle" placeholder="Enter vehicle details">
+
+        <label for="fireAddInfo">Additional Info</label>
+        <textarea id="fireAddInfo" name="fireAddInfo" rows="4" placeholder="Add additional information"></textarea>
+
         <input type="submit" value="Submit">
       </form>
-    </div>
+    </section>
 
-    <div id="Incident" class="form-section">
-       <form>
-         <label for="TypeIncident"> Type of Incident</label>
-         <input type="text" id="TypeIncident" name="TypeIncident"><br><br>
-         <label for="Location">Location</label>
-         <input type="text" id="Location" name="Location"><br><br>
-         <label for="Vehicle">Vehicle</label>
-         <input type="text" id="Vehicle" name="Vehicle"><br><br>
-         <label for="w3review">Review of W3Schools:</label>
-         <textarea id="AddInfo" name="AddInfo" rows="4" cols="50">
-         Add additional information
-         </textarea> 
-         <input type="submit" value="Submit">
-       </form>
-    </div>
-</div>
+    <section id="incidentForm" class="form-section" style="display:none;">
+      <form>
+        <label for="incidentType">Type of Incident</label>
+        <input type="text" id="incidentType" name="incidentType" placeholder="Describe the incident" required>
+
+        <label for="incidentLocation">Location</label>
+        <input type="text" id="incidentLocation" name="incidentLocation" placeholder="Enter location" required>
+
+        <label for="incidentVehicle">Vehicle</label>
+        <input type="text" id="incidentVehicle" name="incidentVehicle" placeholder="Enter vehicle details">
+
+        <label for="incidentAddInfo">Additional Info</label>
+        <textarea id="incidentAddInfo" name="incidentAddInfo" rows="4" placeholder="Add additional information"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
 
   <footer class="footer">
-  <div class="footer-content">
-    <p>© 2025 Error Squad. All rights reserved.</p>
-    <nav>
-      <h4>Contact</h4>
+    <div class="footer-content">
+      <p>© 2025 Error Squad. All rights reserved.</p>
+      <nav>
+        <h4>Contact</h4>
         <p>📧 errorsquad@gmail.com</p>
         <p>📞 +359 888 123 456</p>
         <p>📍 Nationwide Coverage</p>
-    </nav>
-  </div>
-</footer>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    function showForm(formId) {
+      document.querySelectorAll('.form-section').forEach(section => {
+        if(section.id === formId) {
+          section.style.display = 'block';
+          section.classList.add('active');
+        } else {
+          section.style.display = 'none';
+          section.classList.remove('active');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
