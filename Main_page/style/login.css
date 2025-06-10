@@ -93,3 +93,46 @@ body {
       padding: 6px;
       cursor: pointer;
     }
+
+/*dark mode button*/
+body.dark {
+  background: linear-gradient(135deg, #0f0f1b, #0c0c18);
+  color: #eee;
+}
+
+body.dark .login-container {
+  background: rgba(255, 255, 255, 0.05);
+  color: #eee;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+body.dark input {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+body.dark input::placeholder {
+  color: #aaa;
+}
+
+body.dark .login-btn {
+  background: linear-gradient(to right, #6a11cb, #2575fc); 
+}
+
+body.dark .google-btn {
+  background: #444;
+  color: #fff;
+}
+
+body.dark .google-btn:hover {
+  background: #555;
+}
+
+body.dark .register a {
+  color: #ffd580;
+}
+
+body.dark #themeToggle {
+  border-color: #ccc;
+  color: #ccc;
+}

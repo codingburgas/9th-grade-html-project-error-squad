@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Error Squad - Fire Safety Network</title>
+  <title>Fire Report</title>
   <link rel="stylesheet" href="../style/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../script/statistics.js"></script>
-
+  <script src="../script/fire-report.js"></script>
 </head>
 <body data-theme="light">
   <nav class="navbar">
@@ -33,10 +31,41 @@
     </div>
   </nav>
 
-  <div class = "chart-container">
-  <canvas id="myChart"></canvas>
- </div>
- 
+  <div id = "forms">
+    <button onclick="showForm('Fire')">Fire Incident</button>
+    <button onclick="showForm('Incident')">Other Incident</button>
+
+    <div id="Fire" class="form-section active">
+      <form>
+         <label for="Location"> Location</label>
+         <input type="text" id="Location" name="Location"><br><br>
+         <label for="Vehicle">Vehicle</label>
+         <input type="text" id="Vehicle" name="Vehicle"><br><br>
+         <label for="AddInfo">Additional Info</label>
+         <textarea id="AddInfo" name="AddInfo" rows="4" cols="50">
+         Add additional information
+         </textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div id="Incident" class="form-section">
+       <form>
+         <label for="TypeIncident"> Type of Incident</label>
+         <input type="text" id="TypeIncident" name="TypeIncident"><br><br>
+         <label for="Location">Location</label>
+         <input type="text" id="Location" name="Location"><br><br>
+         <label for="Vehicle">Vehicle</label>
+         <input type="text" id="Vehicle" name="Vehicle"><br><br>
+         <label for="w3review">Review of W3Schools:</label>
+         <textarea id="AddInfo" name="AddInfo" rows="4" cols="50">
+         Add additional information
+         </textarea> 
+         <input type="submit" value="Submit">
+       </form>
+    </div>
+</div>
+
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-section">
