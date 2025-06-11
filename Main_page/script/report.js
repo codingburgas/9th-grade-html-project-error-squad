@@ -1,35 +1,24 @@
-// Toggle between Fire and Incident forms with accessibility
-function showForm(formName) {
-  const fireSection = document.getElementById('Fire');
-  const incidentSection = document.getElementById('Incident');
+function showForm(formId) {
+  const forms = document.querySelectorAll('.form-section');
+  const tabs = {
+    fireForm: document.getElementById('tab-fire'),
+    incidentForm: document.getElementById('tab-incident')
+  };
 
-  const fireTab = document.getElementById('tab-fire');
-  const incidentTab = document.getElementById('tab-incident');
+  forms.forEach(section => {
+    const isTarget = section.id === formId;
+    section.style.display = isTarget ? 'block' : 'none';
+    section.classList.toggle('active', isTarget);
+    section.toggleAttribute('hidden', !isTarget);
+  });
 
-  if (formName === 'Fire') {
-    fireSection.classList.add('active');
-    fireSection.removeAttribute('hidden');
-    incidentSection.classList.remove('active');
-    incidentSection.setAttribute('hidden', '');
-
-    fireTab.classList.add('active');
-    fireTab.setAttribute('aria-selected', 'true');
-    incidentTab.classList.remove('active');
-    incidentTab.setAttribute('aria-selected', 'false');
-  } else {
-    incidentSection.classList.add('active');
-    incidentSection.removeAttribute('hidden');
-    fireSection.classList.remove('active');
-    fireSection.setAttribute('hidden', '');
-
-    incidentTab.classList.add('active');
-    incidentTab.setAttribute('aria-selected', 'true');
-    fireTab.classList.remove('active');
-    fireTab.setAttribute('aria-selected', 'false');
+  for (const [key, tab] of Object.entries(tabs)) {
+    const isActive = key === formId;
+    tab.classList.toggle('active', isActive);
+    tab.setAttribute('aria-selected', isActive.toString());
   }
 }
 
-// Theme toggle with yellow theme default
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById("themeToggle");
   const body = document.body;
@@ -37,9 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
     body.classList.add("dark");
-    themeToggleBtn.textContent = "☀️"; 
-  } else {
-    themeToggleBtn.textContent = "🌓"; 
+    themeToggleBtn.textContent = "☀️";
   }
 
   themeToggleBtn.addEventListener("click", () => {
@@ -48,15 +35,3 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 });
-
-    function showForm(formId) {
-      document.querySelectorAll('.form-section').forEach(section => {
-        if(section.id === formId) {
-          section.style.display = 'block';
-          section.classList.add('active');
-        } else {
-          section.style.display = 'none';
-          section.classList.remove('active');
-        }
-      });
-    }

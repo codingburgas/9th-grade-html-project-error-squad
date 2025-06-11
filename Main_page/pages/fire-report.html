@@ -16,8 +16,8 @@
       </div>
 
       <ul class="nav-links">
-        <li><a href="../index.html" class="active">Home</a></li>
-        <li><a href="fire-report.html">Report</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="fire-report.html" class="active">Report</a></li>
         <li><a href="map.html">Map</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="statistics.html">Stats</a></li>
@@ -32,10 +32,10 @@
     </div>
   </nav>
 
-  <main id="forms" class="container">
+  <main class="container">
     <div class="form-buttons">
-      <button type="button" onclick="showForm('fireForm')">Fire Incident</button>
-      <button type="button" onclick="showForm('incidentForm')">Other Incident</button>
+      <button type="button" onclick="showForm('fireForm')" id="tab-fire" aria-selected="true" class="active">Fire Incident</button>
+      <button type="button" onclick="showForm('incidentForm')" id="tab-incident" aria-selected="false">Other Incident</button>
     </div>
 
     <section id="fireForm" class="form-section active">
@@ -53,7 +53,7 @@
       </form>
     </section>
 
-    <section id="incidentForm" class="form-section" style="display:none;">
+    <section id="incidentForm" class="form-section" hidden>
       <form>
         <label for="incidentType">Type of Incident</label>
         <input type="text" id="incidentType" name="incidentType" placeholder="Describe the incident" required>
@@ -75,13 +75,11 @@
   <footer class="footer">
     <div class="footer-content">
       <nav>
-        <h4>Contact</h4>
         <p>📧 errorsquad@gmail.com</p>
         <p>📞 +359 888 123 456</p>
         <p>📍 Nationwide Coverage</p>
       </nav>
     </div>
   </footer>
-
 </body>
 </html>

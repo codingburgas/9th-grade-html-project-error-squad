@@ -10,7 +10,11 @@
 <body data-theme="light">
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">🔥 Error Squad</div>
+      <div class="logo-nav">
+        <div class="logo-icon-nav">⚠️</div>
+        <div class="logo-text">Error Squad</div>
+      </div>
+
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="fire-report.html">Report</a></li>
@@ -19,7 +23,12 @@
         <li><a href="statistics.html">Stats</a></li>
         <li><a href="vehicles.html">Vehicles</a></li>
       </ul>
-      <button id="themeToggle" class="theme-btn">🌓</button>
+
+      <div class="nav-cta">
+        <button id="themeToggle" class="theme-btn" title="Toggle Theme">🌓</button>
+        <a href="login.html" class="btn btn-login">Login</a>
+        <a href="register.html" class="btn btn-join">Join</a>
+      </div>
     </div>
   </nav>
 
@@ -36,6 +45,17 @@
   </div>
 
   <div id="map"></div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <nav>
+        <p>📧 errorsquad@gmail.com</p>
+        <p>📞 +359 888 123 456</p>
+        <p>📍 Nationwide Coverage</p>
+      </nav>
+    </div>
+  </footer>
+  
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="../script/map.js"></script>
